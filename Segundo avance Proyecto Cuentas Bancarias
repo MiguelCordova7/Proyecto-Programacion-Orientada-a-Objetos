@@ -1,0 +1,189 @@
+PARTE DEL AVANCE HECHO POR: MIGUEL CÓRDOVA
+
+Se hizo el encapsulamiento debido en la clase "Cuentas"
+package clases;
+
+public class Cuentas {
+    int num;
+    String tipo;
+    int saldo;
+    
+    public Cuentas(){
+    }
+    
+    public Cuentas(int num, String tipo, int saldo){
+    this.num=num;
+    this.tipo=tipo;
+    this.saldo=saldo;
+    }
+    
+  public int getnum(){
+  return num;
+  }
+  
+  public String gettipo(){
+  return tipo;
+  }
+  
+  public int getsaldo(){
+  return saldo;
+  }
+    
+  
+  public void setnum(int num){
+  this.num=num;
+  }
+  
+   public void settipo(String tipo){
+  this.tipo=tipo;
+  }
+   
+    public void setsaldo(int saldo){
+  this.saldo=saldo;
+  }
+    
+    public string toString(){
+    return "Cuenta{"  + "Numero" + num  +", Tipos" + tipo + ", saldos" + saldo +'}';   
+    }
+}
+
+Y se comenzo a trabajer en la clase "Registro"
+
+package main;
+import clases.*;
+public class Registro {
+  
+    static NombreClientes NombresClientes[]=null;
+
+static int cont=0;
+
+public static void main (String[] args){
+NombresClientes = new NombreClientes[3];
+
+int cantidad=0;
+int op= 0;
+do{
+System.out.println("----------MENÚ DE CONTROL----------");
+System.out.println("-----------------------------------");
+System.out.println("1.- INGRESAR CLIENTE");
+System.out.println("2.-EDITAR CLIENTES");
+System.out.println("3.-TRANSACCIONES");
+System.out.println("4.-LISTAR CLIENTES");
+System.out.println("5.-SALIR");
+System.out.println("----------------------------------");
+
+System.out.println("Ingrese el número de la opción que desea realizar");
+op=Leer.datoInt();
+
+
+switch (op){
+    case 1:
+        ingresarClientes();
+        break;
+    case 2:
+        editarClientes();
+        break;
+    case 3:
+        transacciones();
+        break;
+    case 4:
+        listarClientes();
+    case 5:
+        System.out.println("SALIENDO...");
+break;
+    default:
+        System.out.println("Opciones validas: 1 2 3 4 5");
+}
+While (op != 5);
+{
+    System.exit(0);
+}
+
+
+private static void ingresarClientes(){
+String nombresClientes;
+String apellidosClientes;
+String tipo;
+int num=0;
+int saldo=0;
+int cantidad=0;
+
+
+System.out.println("-----------DATOS DEL CLIENTE---------");
+System.out.println("-------------------------------------");
+System.out.println("Nombre: ");
+nombresClientes=Leer.dato();
+System.out.println("Apellidos: ");
+apellidosClientes=Leer.dato();
+System.out.println("Cantidad de cuentas: ");
+cantidad=leer.datoInt();
+
+
+
+
+Luego esta parte del trabajo la ha realizado mi compañero: Mauricio Amaya
+
+nombreClientes[cont]= new nombresClientes(nombresClientes, apellidosClientes, cantidad);
+for (int i=0; i<cantidad; i++){
+    System.out.print("/n/n/n--datos de la cuenta--");
+    System.out.print("----------------------------");
+    
+    System.out.print("numero de cuenta: ");
+    num= leer.datoint();
+    System.out.print("tipo de cuenta: ");
+    tipo= leer.dato();
+    System.out.print("saldo: "+saldo);
+    saldo=leer.dato();
+    NombresClientes[cont].ingresarcuentas(num, tipo, saldo);
+}
+ cont++;
+ System.out.print("cliente y cuenta almacenada "+cont);
+}
+private static void editarClientes(){
+    String rut = null;
+    int accion =0;
+    int pos = -1;
+    int cant =0;
+    System.out.print("/n/n ingrese RUT de busqueda: ");
+    rut = leer.dato();
+    pos =BuscarCliente(rut);
+    
+    if (pos>=0){
+        System.out.print("/n/n cliente encontrado: "+Cliente[pos].toString());
+        cant= cliente[pos].getcant();
+        for (int i =0; i<cant; i++){
+            cliente[pos].getCuenta()[i].toString();
+        }
+    }
+    System.out.print("--menu de modificacion de cliente--");
+    System.out.print("1.-modificar cliente");
+    System.out.print("2.-modificar cliente");
+    System.out.print("3.-modificar cliente");
+    accion = leer.dato();
+    switch (accion){
+        case 1:
+            modificarCliente(pos);
+            break;
+        case 2:
+             modificarcliente(pos);
+             break;
+        case 3:
+            eliminaRegistro(pos);
+            break;
+        default:
+            System.out.print("opcion no valida");
+    }else{
+            System.out.print("n/n/n registro inexistente");
+            }
+    
+}   
+
+    private static void eliminaRegistro(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private static void modificarcliente(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+}
