@@ -1,0 +1,52 @@
+*TERCER AVANCE PROYECTO CUENTAS BANCARIAS  27/3/22*
+
+PARTE REALIZADA POR RICARDO AMAYA:
+
+package main;
+public class herenciaRegistro extends Registro {
+    private int numerodecuenta;
+    private float cantidad;
+    
+    public herenciaRegistro (string nombresClientes,String apellidosClientes,String tipo,int num=0,int saldo=0,int cantidad=0,int numerodecuenta,float cantidad),int saldo=0,int cantidad=0,int numerodecuenta,float cantidad){
+    super(nombresClientes,apellidosClientes,tipo);
+    this.numerodecuenta=numerodecuenta;
+    this.cantidad=cantidad;
+    
+
+}
+    
+ public void mostrardatos(){
+ System.out.print("nombre"+nombresClientes;
+"Apellidos"+apellidosClientes:
+"tipo de cuenta"+tipo:
+"numero de cuenta"+num:
+"saldo"+saldo: "cantidad"+cantidad);
+
+ }   
+    
+}
+
+
+
+
+PARTE REALIZADA POR MIGUEL CÓRDOVA:
+
+package main;
+public class HerenciaCuentas extends Cuentas {
+    private int num;
+    private float saldo;
+    
+    public HerenciaCuentas (String tipo, int num, int saldo)
+{
+    super(tipo);
+    this.num=num;
+    this.saldo=saldo;
+}
+    
+ public void mostrardatos()
+ {
+ System.out.println("Tipo de cuenta: " +tipo);
+ System.out.println("Numero de cuenta: " + num);
+ System.out.println("Saldo de la cuenta: " + saldo);
+ }
+}
