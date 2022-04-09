@@ -29,16 +29,27 @@ PARTE REALIZADA POR MIGUEL CÓRDOVA:
 
 package main;
 
-public class CuentasPolimorfismo {
+public class CuentasPolimorfismo extends Cuentas{
+    
     public static void main (String[] args){
-   Cuenta datoscuentas []= new Cuenta[4];
-   datoscuentas[0]=new Cuenta ("Cuenta: "); 
-   datoscuentas[1] = new Cuenta (1,"Número de cuenta: ");
-   datoscuentas [2] = new Cuenta (2, "Tipo de cuenta: ");
-   datoscuentas[3]= new Cuenta(3, "Saldo de la cuenta: ");
-    for (Cuenta datos: datoscuentas){
-    System.out.print(Cuentas.mostrardatoscuentas); 
-    System.out.print("");
-    } 
+   NumCuentas ObjNumcuenta = new NumCuentas();
+   NumeroCuenta ObjNumeroCuenta=new NumeroCuenta();
+   TipoCuenta ObjTipo = new TipoCuenta();
+   SaldoCuenta ObjSaldo= new SaldoCuenta();
+   
+   Cuentas ObjCuentas[]=new Cuentas[4];
+   
+   ObjCuentas[0]=ObjNumCuenta; 
+   ObjCuentas[1] = ObjNumeroCuenta;
+   ObjCuentas[2] = new ObjTipoCuenta;
+   ObjCuentas[3]= ObjSaldoCuenta;
+    
+   
+   ObjCuentas[0].mostrardatoscuentas();
+   ObjCuentas[1].mostrardatoscuentas();
+   ObjCuentas[2].mostrardatoscuentas();
+   ObjCuentas[3].mostrardatoscuentas();
+    }
+    
 }
 }
