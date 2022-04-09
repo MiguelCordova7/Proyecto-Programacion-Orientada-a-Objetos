@@ -1,0 +1,44 @@
+*CUARTO AVANCE PROYECTO CUENTAS BANCARIAS 9/04/22*
+
+PARTE REALIZADA POR RICARDO AMAYA:
+
+package main;
+
+public class NewClass {
+    public static void main (string[] args){
+   leerdatos misdatos []= new leerdatos[4];
+   misdatos[0]=new leerdatos ("numero de cuenta es 22233311", "nombre es Juan", "cantidad $4000"); 
+   misdatos[1] = new leerdatos (1,"nombre", "tipo de cuenta", "cantidad");
+   misdatos [2] = new leerdatos (2, "cantidad", "numeros de clientes", "numeros de cuentas");
+   misdatos[3] =new leerdatos (3, "transacciones");
+    for (leerdatos datos: misdatos){
+    System.out.print(leerdatos.mostrardatos); 
+    System.out.print("");
+    }
+    }
+}
+
+
+
+
+
+
+
+PARTE REALIZADA POR MIGUEL CÓRDOVA:
+
+
+package main;
+
+public class CuentasPolimorfismo {
+    public static void main (String[] args){
+   Cuenta datoscuentas []= new Cuenta[4];
+   datoscuentas[0]=new Cuenta ("Cuenta: "); 
+   datoscuentas[1] = new Cuenta (1,"Número de cuenta: ");
+   datoscuentas [2] = new Cuenta (2, "Tipo de cuenta: ");
+   datoscuentas[3]= new Cuenta(3, "Saldo de la cuenta: ");
+    for (Cuenta datos: datoscuentas){
+    System.out.print(Cuentas.mostrardatoscuentas); 
+    System.out.print("");
+    } 
+}
+}
