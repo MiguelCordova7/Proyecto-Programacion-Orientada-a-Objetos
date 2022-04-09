@@ -31,24 +31,25 @@ package main;
 
 public class CuentasPolimorfismo extends Cuentas{
     
-    public static void main (String[] args){
+   public static void main (String[] args){
    NumCuentas ObjNumcuenta = new NumCuentas();
    NumeroCuenta ObjNumeroCuenta=new NumeroCuenta();
    TipoCuenta ObjTipo = new TipoCuenta();
    SaldoCuenta ObjSaldo= new SaldoCuenta();
    
-   Cuentas ObjCuentas[]=new Cuentas[4];
    
-   ObjCuentas[0]=ObjNumCuenta; 
-   ObjCuentas[1] = ObjNumeroCuenta;
-   ObjCuentas[2] = new ObjTipoCuenta;
-   ObjCuentas[3]= ObjSaldoCuenta;
+   Cuentas ObjCuentasClientes[]=new Cuentas[4];
+   
+   ObjCuentasClientes[0] = ObjNumCuenta; 
+   ObjCuentasClientes[1] = ObjNumeroCuenta;
+   ObjCuentasClientes[2] = ObjTipoCuenta;
+   ObjCuentasClientes[3] = ObjSaldoCuenta;
     
    
-   ObjCuentas[0].mostrardatoscuentas();
-   ObjCuentas[1].mostrardatoscuentas();
-   ObjCuentas[2].mostrardatoscuentas();
-   ObjCuentas[3].mostrardatoscuentas();
+   ObjCuentasClientes[0].mostrardatoscuentas();
+   ObjCuentasClientes[1].mostrardatoscuentas();
+   ObjCuentasClientes[2].mostrardatoscuentas();
+   ObjCuentasClientes[3].mostrardatoscuentas();
     }
     
 }
