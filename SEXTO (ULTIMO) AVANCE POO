@@ -1,18 +1,86 @@
+*SEXTO AVANCE PROYECTO CUENTAS BANCARIAS 5/06/22*
+
+PARTE REALIZADA POR MIGUEL CORDOVA:
+
+PRIMERA PRUEBA UNITARIA REALIZADA:
+import clases.Cuentas;
+import static org.testng.Assert.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class TestCuentas {
+    
+    public TestCuentas() {
+    }
+
+  
+    @Test
+    public void Cuentas(){
+    float resultadoActual = Cuentas.Cuentas();
+    float resultadoEsperado = (float) 2;
+        
+        assertEquals(resultadoActual, resultadoEsperado, 0.001, "Error en cuentas");
+    }
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
+    @BeforeMethod
+    public void setUpMethod() throws Exception {
+    }
+
+    @AfterMethod
+    public void tearDownMethod() throws Exception {
+    }
+}
 
 
+SEGUNDA PRUEBA UNITARIA REALIZADA:
+import static org.testng.Assert.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+public class TestRegistro {
+    
+    public TestRegistro() {
+    }
 
+    @Test
+    public void testRegistro() {
+    float resultadoActual= Registro.NombresClientes();
+    float resultadoEsperado = (float) 3;
+    
+    assertEquals(resultadoActual, resultadoEsperado, 0.001, "Error en Registro(NombreClientes)");
+    
+    }
 
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
 
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
 
+    @BeforeMethod
+    public void setUpMethod() throws Exception {
+    }
 
-
-
-
-
-
-
-
+    @AfterMethod
+    public void tearDownMethod() throws Exception {
+    }
+}
 
 
 
